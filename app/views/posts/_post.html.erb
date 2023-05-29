@@ -16,6 +16,13 @@
     <%= post.keyword %>
   </p>
 
+  <% if post.user.present? %>
+    <p>
+      <%= post.user.email %>
+    </p>
+  <% end %>
+
+
   <p>
     <%= link_to "", post, class:"post-link" %>
   </p>
