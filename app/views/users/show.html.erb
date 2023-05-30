@@ -1,6 +1,16 @@
-<div>
-  <%= @user.username %>
-  <%= @user.email %>
-  <%= @user.bio %>
-  <%= @user.id %>
+<div class="col-12 text-center" style="row">
+  <div style="margin: 25px;">
+    <h1><%= @user.username %></h1>
+  </div>
+  <div style="margin: 25px;">
+    <h4><%= @user.email %></h4>
+  </div>
+  <div style="margin: 25px;">
+    <h4><%= @user.bio %></h4>
+  </div>
+  <div>
+    <% if @user.avatar.attached? %>
+      <%= image_tag @user.avatar, style:"width: 100px; height: 100px;" %>
+    <% end %>
+  </div>
 </div>
