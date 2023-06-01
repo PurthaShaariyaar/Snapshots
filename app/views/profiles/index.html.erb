@@ -1,0 +1,11 @@
+<div class="col-xl-4 col-md-6 col-sm-8 col-10 text-center" style="margin: auto;">
+  <% @users.each do |user| %>
+    <%= render user %>
+  <% end %>
+</div>
+<div class="col-xl-4 col-md-6 col-sm-8 col-10 text-center" style="margin: auto; padding: 50px;">
+  <% if !@users[0].present? %>
+    <h1>No Users Found</h1>
+  <% end %>
+</div>
+
